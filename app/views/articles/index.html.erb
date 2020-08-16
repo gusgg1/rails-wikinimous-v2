@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <% @articles.each do |article| %>
+          <article>
+            <h2>
+              <%= link_to article_path(article.id) do %>
+                <%= article.title %>
+              <% end %>
+            </h2>
+            <%= article.content %>
+          </article>
+        <% end %>
+    </div>
+  </div>
+</div>
